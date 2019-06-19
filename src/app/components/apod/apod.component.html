@@ -1,0 +1,21 @@
+<br>
+<div class="container" style='width:900px'>
+  
+    <h3 style='text-align: center'>{{apod.title}}</h3>
+    <br>
+  <!-- <img src="{{apod.url}}" class="img-fluid rounded-circle" alt="APOD" width="900" height="900"> -->
+  <!-- <object width="400" height="400" data="{{apod.url}}"></object> -->
+  
+  <div *ngIf="apod.media_type == 'video'" >
+      <iframe width="900" height="600" [src]="sanitizer.bypassSecurityTrustResourceUrl(apod.url)" frameborder="0"></iframe>
+  </div>
+  <div *ngIf="apod.media_type == 'image'">
+      <img src="{{apod.url}}" class="img-fluid rounded-circle" alt="APOD" width="900" height="600"> 
+  </div>
+  <br>
+  <p style='text-align: justify;'>{{apod.explanation}}</p>
+
+</div>
+
+
+

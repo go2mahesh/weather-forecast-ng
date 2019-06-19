@@ -1,0 +1,25 @@
+
+  <div style='width: 900px; text-align: justify'>
+      <div class="container row">
+           <input class="col-6 form-control" type="text" [(ngModel)] = 'txtSearch' name='txtSearch'> &nbsp;
+           <input type='btnSubmit' (click)='getNews(txtSearch)' value='Get News' class='btn btn-primary'>
+      </div>
+  
+   <br>
+
+    <table class="table  table-hover table-responsive">
+        <tbody>
+          <tr *ngFor="let item of newsData.articles">
+            <td><img src='{{item.urlToImage}}' height='40' width='40'></td>
+            <td>
+              <p>
+                <a href='{{item.url}}'>{{item.title}}</a> - <small> {{item.publishedAt | date:'medium' }}</small> <br>
+                <small>{{item.content}}</small>             
+            </p>
+            </td>
+            
+          </tr>
+        </tbody>
+    </table>
+  </div> 
+

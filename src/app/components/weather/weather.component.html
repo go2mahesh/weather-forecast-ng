@@ -1,0 +1,39 @@
+
+<div>
+    <!-- <label>{{forecastday2.}}</label> -->
+
+
+<table class="table borderless">  
+<tbody>
+    <tr >
+    <td *ngFor="let item of forecastday2"> 
+        <ul>
+            <li>{{ item.date.weekday }} </li>
+            <li><img [src]='item.icon_url' [alt] = 'item.icon'></li>
+            <li>{{ item.high.fahrenheit }} / {{ item.low.fahrenheit }}</li>
+        </ul> 
+    </td>           
+    </tr>  
+</tbody>
+</table>
+</div>
+
+
+<!-- <button type="button" class="btn btn-primary" (click) = 'getWeather(txtCity)'>Get Weather</button> -->
+
+
+
+
+
+<!-- {{ forecastday2 | json }}  -->
+
+
+
+
+
+
+
+
+
+
+ 
